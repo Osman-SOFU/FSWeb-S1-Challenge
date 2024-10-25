@@ -44,7 +44,7 @@ const fenomenler = [
   },
   {
     "number": 2,
-    "profile": "Justin Biber",
+    "profile": "Justin Bieber",
     "followers": 114165664,
     "posts": 31371,
     "platform": "Twitter"
@@ -157,9 +157,8 @@ Aşağıdakileri konsolda gösterim (console.log) işlemi gerçekleştirerek, yu
 /* Görev 2 (otomatik kontrol testi yapılmayacak):
 (işlev yazmanıza gerek yok)
 Fenomenler dizisinde bir yazım hatası var 😱 7. sıradaki fenomen 'Justin Bieber' ın soyismi 'Biber' olarak yanlış yazılmış. Bu sorunu düzeltin ve çalışmanızı kontrol etmek için console.log() yapın.
-
-
-/*  Görev 3:
+/*
+Görev 3:
 Aşağıdaki işlemleri yapmak için indekseGoreFenomen işlevini kullanın:
 1. İlk parametre olarak fenomenler dizisini alın,
 2. İkinci parametre de ise, dizide istenen feneomene ait indeksi gösteren bir sayıyı alın.
@@ -168,8 +167,8 @@ Aşağıdaki işlemleri yapmak için indekseGoreFenomen işlevini kullanın:
 NOT: DÖNDÜĞÜNÜZ DİZİN YUKARIDAKİ BİÇİMLE EŞLEŞMESİ GEREKİR, YA DA TESTİ GEÇMEYECEKTİR!
 ÖRNEK: fenomenler dizisi ve 3 sayısı ile indekseGoreFenomen çağrılırsa, `3. indekste bulunan fenomen: Leo Messi' */
 
-function indekseGoreFenomen(/*kod*/) {
-  /*kod*/
+function indekseGoreFenomen(fenomenler, indeks) {
+  return `${indeks}. indekste bulunan fenomen: ${fenomenler[indeks].profile}`;
 }
 
 
@@ -182,9 +181,14 @@ Aşağıdakileri yapmak için profilListesi'ni kullanın:
 🌟 Dönüş ÖRNEĞİ: ["Instagram", "Cristiano Ronaldo", "Kylie"....]
 */
 
-function profilListesi(/*kod*/) {
-  /*kod*/
+function profilListesi(fenomenler) {
+  const yeniDizi = [...fenomenler];
+  for (let i = 0; i < yeniDizi.length; i++) {
+    yeniDizi[i] = yeniDizi[i].profile; 
+  }
+  return yeniDizi; 
 }
+
 
 
 
